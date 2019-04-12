@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        animation: rotate 5s linear infinite;
+        margin: 300px auto;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(20deg) rotateY(20deg);
+    }
+
+    .box:hover .top {
+        transition: all 10s;
+        transform: rotateX(90deg) translateZ(500px);
+    }
+
+    .box:hover .bottom {
+        transition: all 10s;
+        transform: rotateX(-90deg) translateZ(500px);
+    }
+
+    .box:hover .left {
+        transition: all 10s;
+        transform: rotateY(90deg) translateZ(500px);
+    }
+
+    .box:hover .right {
+        transition: all 10s;
+        transform: rotateY(-90deg) translateZ(500px);
+    }
+
+    .box:hover .front {
+        transition: all 10s;
+        transform: translateZ(500px);
+    }
+
+    .box:hover .back {
+        transition: all 10s;
+        transform: rotateY(180deg) translateZ(500px);
+    }
+
+    .box div {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        position: absolute;
+        opacity: 0.8;
+    }
+
+    .top {
+        background: springgreen;
+        transform: rotateX(90deg) translateZ(50px);
+    }
+
+    .bottom {
+        background: #ff3f58;
+        transform: rotateX(-90deg) translateZ(50px);
+    }
+
+    .left {
+        background: blueviolet;
+        transform: rotateY(90deg) translateZ(50px);
+    }
+
+    .right {
+        background: #ff6f20;
+        transform: rotateY(-90deg) translateZ(50px);
+    }
+
+    .front {
+        background: #1e8cff;
+        transform: translateZ(50px);
+    }
+
+    .back {
+        background: #843f85;
+        transform: rotateY(180deg) translateZ(50px);
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotateX(20deg) rotateY(20deg);
+        }
+        100% {
+            transform: rotateX(380deg) rotateY(380deg);
+        }
+    }
+
+    .inbox {
+        width: 10px;
+        height: 10px;
+        border: black 1px solid;
+    }
+
+    .intop {
+        background: springgreen;
+    }
+
+    .inbottom {
+        background: #ff3f58;
+    }
+
+    .inleft {
+        background: #5f98ff;
+    }
+
+    .inright {
+        background: #ff55f6;
+    }
+
+    .infront {
+        background: #ffaf46;
+    }
+
+    .inback {
+        background: #8eff5a;
+    }
+</style>
+<body>
+<div class="box">
+        <div class="top">上</div>
+        <div class="bottom">下</div>
+        <div class="left">左</div>
+        <div class="right">右</div>
+        <div class="front">前</div>
+        <div class="back">后</div>
+</div>
+</body>
+</html>
