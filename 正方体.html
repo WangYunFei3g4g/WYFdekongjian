@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+
+    .box {
+        margin: 200px auto;
+        width: 100px;
+        height: 100px;
+        animation: rotate 10s linear infinite;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(20deg) rotateY(20deg);
+    }
+
+
+    .box:hover {
+
+    }
+
+    .box:hover .top {
+        width: 200px;
+        height: 200px;
+        transform: rotateX(90deg) translateZ(400px);
+    }
+
+
+    .box:hover .top1 {
+        margin-bottom: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .top2 {
+        margin-bottom: 50px;
+        margin-left: 50px;
+    }
+
+    .box:hover .top3 {
+        margin-top: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .top4 {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+
+    .box:hover .bottom {
+        width: 200px;
+        height: 200px;
+        transform: rotateX(-90deg) translateZ(400px);
+    }
+
+    .box:hover .bottom1 {
+        margin-bottom: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .bottom2 {
+        margin-bottom: 50px;
+        margin-left: 50px;
+    }
+
+    .box:hover .bottom3 {
+        margin-top: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .bottom4 {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+
+    .box:hover .left {
+        width: 200px;
+        height: 200px;
+        transform: rotateY(-90deg) translateZ(400px);
+    }
+
+    .box:hover .left1 {
+        margin-bottom: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .left2 {
+        margin-bottom: 50px;
+        margin-left: 50px;
+    }
+
+    .box:hover .left3 {
+        margin-top: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .left4 {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+
+    .box:hover .right {
+        width: 200px;
+        height: 200px;
+        transform: rotateY(90deg) translateZ(400px);
+    }
+
+    .box:hover .right1 {
+        margin-bottom: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .right2 {
+        margin-bottom: 50px;
+        margin-left: 50px;
+    }
+
+    .box:hover .right3 {
+        margin-top: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .right4 {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+
+    .box:hover .front {
+        width: 200px;
+        height: 200px;
+        transform: translateZ(400px);
+    }
+
+    .box:hover .front1 {
+        margin-bottom: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .front2 {
+        margin-bottom: 50px;
+        margin-left: 50px;
+    }
+
+    .box:hover .front3 {
+        margin-top: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .front4 {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+
+    .box:hover .back {
+        width: 200px;
+        height: 200px;
+        transform: rotateY(180deg) translateZ(400px);
+    }
+
+    .box:hover .back1 {
+        margin-bottom: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .back2 {
+        margin-bottom: 50px;
+        margin-left: 50px;
+    }
+
+    .box:hover .back3 {
+        margin-top: 50px;
+        margin-right: 50px;
+    }
+
+    .box:hover .back4 {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+
+    .top1, .top2, .top3, .top4 {
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        position: absolute;
+
+        transition: all 10s 10s;
+    }
+
+    .bottom1, .bottom2, .bottom3, .bottom4 {
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        position: absolute;
+
+        transition: all 10s 10s;
+    }
+
+    .left1, .left2, .left3, .left4 {
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        position: absolute;
+
+        transition: all 10s 10s;
+    }
+
+    .right1, .right2, .right3, .right4 {
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        position: absolute;
+
+        transition: all 10s 10s;
+    }
+
+    .front1, .front2, .front3, .front4 {
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        position: absolute;
+
+        transition: all 10s 10s;
+    }
+
+    .back1, .back2, .back3, .back4 {
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        position: absolute;
+
+        transition: all 10s 10s;
+    }
+
+    .top, .bottom, .left, .right, .front, .back {
+        width: 100px;
+        height: 100px;
+        transition: all 10s;
+        position: absolute;
+
+    }
+
+    .top {
+        transform: rotateX(90deg) translateZ(50px);
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(50px);
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(50px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(50px);
+    }
+
+    .front {
+        transform: translateZ(50px);
+    }
+
+    .back {
+        transform: rotateY(180deg) translateZ(50px);
+    }
+
+    .top1 {
+        top: 0px;
+        left: 0px;
+    }
+
+    .top2 {
+        top: 0;
+        right: 0px;
+    }
+
+    .top3 {
+        bottom: 0;
+        left: 0;
+    }
+
+    .top4 {
+        bottom: 0;
+        right: 0;
+    }
+
+
+    .bottom1 {
+        top: 0px;
+        left: 0px;
+    }
+
+    .bottom2 {
+        top: 0;
+        right: 0px;
+    }
+
+    .bottom3 {
+        bottom: 0;
+        left: 0;
+    }
+
+    .bottom4 {
+        bottom: 0;
+        right: 0;
+    }
+
+
+    .left1 {
+        top: 0px;
+        left: 0px;
+    }
+
+    .left2 {
+        top: 0;
+        right: 0px;
+    }
+
+    .left3 {
+        bottom: 0;
+        left: 0;
+    }
+
+    .left4 {
+        bottom: 0;
+        right: 0;
+    }
+
+
+    .right1 {
+        top: 0px;
+        left: 0px;
+    }
+
+    .right2 {
+        top: 0;
+        right: 0px;
+    }
+
+    .right3 {
+        bottom: 0;
+        left: 0;
+    }
+
+    .right4 {
+        bottom: 0;
+        right: 0;
+    }
+
+
+    .front1 {
+        top: 0px;
+        left: 0px;
+    }
+
+    .front2 {
+        top: 0;
+        right: 0px;
+    }
+
+    .front3 {
+        bottom: 0;
+        left: 0;
+    }
+
+    .front4 {
+        bottom: 0;
+        right: 0;
+    }
+
+
+    .back1 {
+        top: 0px;
+        left: 0px;
+    }
+
+    .back2 {
+        top: 0;
+        right: 0px;
+    }
+
+    .back3 {
+        bottom: 0;
+        left: 0;
+    }
+
+    .back4 {
+        bottom: 0;
+        right: 0;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotateX(20deg) rotateY(20deg);
+        }
+        100% {
+            transform: rotateX(380deg) rotateY(380deg);
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .x {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        animation: boom 0.5s linear infinite alternate-reverse;
+    }
+
+    .one, .two, .three {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: pink;
+        box-shadow: 0px 0px 40px 5px pink;
+    }
+
+    @keyframes boom {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.3);
+        }
+    }
+
+    .one {
+        left: 0px;
+        border-radius: 50%;
+    }
+
+    .two {
+        right: 0px;
+        border-radius: 50%;
+    }
+
+    .three {
+        transform: rotateZ(45deg);
+        top: 10px;
+        left: 10px;
+    }
+
+</style>
+<body>
+<div class="box">
+    <div class="x">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+    <div class="top">
+        <img src="img/QQ图片20190108204003.png" alt="">
+        <div class="top1"><img src="img/34.jpg" alt=""></div>
+        <div class="top2"><img src="img/34.jpg" alt=""></div>
+        <div class="top3"><img src="img/34.jpg" alt=""></div>
+        <div class="top4"><img src="img/34.jpg" alt=""></div>
+    </div>
+
+
+    <div class="bottom">
+        <img src="img/QQ图片20190108204003.png" alt="">
+        <div class="bottom1"><img src="img/34.jpg" alt=""></div>
+        <div class="bottom2"><img src="img/34.jpg" alt=""></div>
+        <div class="bottom3"><img src="img/34.jpg" alt=""></div>
+        <div class="bottom4"><img src="img/34.jpg" alt=""></div>
+    </div>
+
+
+    <div class="left">
+        <img src="img/QQ图片20190108204003.png" alt="">
+        <div class="left1"><img src="img/34.jpg" alt=""></div>
+        <div class="left2"><img src="img/34.jpg" alt=""></div>
+        <div class="left3"><img src="img/34.jpg" alt=""></div>
+        <div class="left4"><img src="img/34.jpg" alt=""></div>
+    </div>
+
+    <div class="right">
+        <img src="img/QQ图片20190108204003.png" alt="">
+        <div class="right1"><img src="img/34.jpg" alt=""></div>
+        <div class="right2"><img src="img/34.jpg" alt=""></div>
+        <div class="right3"><img src="img/34.jpg" alt=""></div>
+        <div class="right4"><img src="img/34.jpg" alt=""></div>
+    </div>
+
+
+    <div class="front">
+        <img src="img/QQ图片20190108204003.png" alt="">
+        <div class="front1"><img src="img/34.jpg" alt=""></div>
+        <div class="front2"><img src="img/34.jpg" alt=""></div>
+        <div class="front3"><img src="img/34.jpg" alt=""></div>
+        <div class="front4"><img src="img/34.jpg" alt=""></div>
+    </div>
+
+    <div class="back">
+        <img src="img/QQ图片20190108204003.png" alt="">
+        <div class="back1"><img src="img/34.jpg" alt=""></div>
+        <div class="back2"><img src="img/34.jpg" alt=""></div>
+        <div class="back3"><img src="img/34.jpg" alt=""></div>
+        <div class="back4"><img src="img/34.jpg" alt=""></div>
+    </div>
+
+</div>
+</body>
+</html>
