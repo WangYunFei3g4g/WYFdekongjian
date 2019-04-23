@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qhit.mapper.ProfileMapper">
+    <select id="getAll" resultType="Profile">
+        select * from profile
+    </select>
+    <select id="getNameById" resultType="Profile">
+        select * from profile where id=#{id}
+    </select>
+    <insert id="add">
+        insert into profile value (default ,#{name},#{birthday},#{gender},#{career},#{address},#{mobile})
+    </insert>
+    <update id="update">
+        update profile set name=#{name},birthday=#{birthday},gender=#{gender},career=#{career},address=#{address},mobile=#{mobile} where id=#{id}
+    </update>
+    <delete id="del">
+        delete from profile where id=#{id}
+    </delete>
+</mapper>
